@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import sampleData from "./sampleData";
 import "./App.css";
 import { PDFViewer } from "@react-pdf/renderer";
-// import ItineraryHeaderSection from "./components/ItineraryHeaderSection";
-import ItineraryPDFViewer from "./components/ItineraryPDF/ItineraryPDFViewer";
+import ItineraryPDFViewer from "./components/ItineraryPDFViewer";
+import ItineraryPDFBuilder from "./components/ItineraryPDFBuilder";
+import ItineraryHeader from "./components/ItineraryHeader";
+import FooterSection from "./components/FooterSection";
 
 export default function App() {
   const [data, setData] = useState({
@@ -69,24 +71,28 @@ export default function App() {
     ],
     flights: [
       {
+        id: 1,
         date: "Thu 10 Jan'24",
         airline: "Air India (AX-123)",
-        route: "From Delhi (DEL) To Singapore (SIN)",
+        route: { from: "Delhi (DEL)", to: "Singapore (SIN)" },
       },
       {
+        id: 2,
         date: "Thu 10 Jan'24",
         airline: "Air India (AX-123)",
-        route: "From Delhi (DEL) To Singapore (SIN)",
+        route: { from: "Delhi (DEL)", to: "Singapore (SIN)" },
       },
       {
+        id: 3,
         date: "Thu 10 Jan'24",
         airline: "Air India (AX-123)",
-        route: "From Delhi (DEL) To Singapore (SIN)",
+        route: { from: "Delhi (DEL)", to: "Singapore (SIN)" },
       },
       {
+        id: 4,
         date: "Thu 10 Jan'24",
         airline: "Air India (AX-123)",
-        route: "From Delhi (DEL) To Singapore (SIN)",
+        route: { from: "Delhi (DEL)", to: "Singapore (SIN)" },
       },
     ],
     hotelBookings: [
@@ -164,12 +170,14 @@ export default function App() {
     },
     inclusionSummaryData: [
       {
+        id: 1,
         category: "Flight",
         count: 2,
         details: "All Flights Mentioned",
         status: "Awaiting Confirmation",
       },
       {
+        id: 2,
         category: "Tourist Tax",
         count: 2,
         details:
@@ -177,6 +185,7 @@ export default function App() {
         status: "Awaiting Confirmation",
       },
       {
+        id: 3,
         category: "Hotel",
         count: 2,
         details: "Airport To Hotel - Hotel To Attractions - Day Trips If Any",
@@ -199,11 +208,99 @@ export default function App() {
     ],
   });
 
+  //   const [delayedData, setDelayedData] = useState(data);
+
+  //   useEffect(() => {
+  //     let ignore = false;
+  //     const timer = setTimeout(() => {
+  //       if (!ignore) setDelayedData(data);
+  //     }, 1000); // Debounce PDF update
+
+  //     return () => {
+  //       ignore = true;
+  //       clearTimeout(timer);
+  //     };
+  //   }, [data]);
+
+  //   const memoizedData = useMemo(
+  //     () => delayedData,
+  //     [JSON.stringify(delayedData)]
+  //   );
+
+  //   return (
+  //     <div className="app-container">
+  //       {/* Fixed Header */}
+
+  //       <ItineraryHeader className="fixed-header" />
+
+  //       {/* Main Content */}
+  //       <div className="main">
+  //         {/* Left Panel — Builder */}
+  //         <div className="left-panel">
+  //           <ItineraryPDFBuilder data={data} setData={setData} />
+  //         </div>
+
+  //         {/* Right Panel — PDF Viewer */}
+  //         <div className="right-panel">
+  //           <PDFViewer width="100%" height="100%">
+  //             <ItineraryPDFViewer data={memoizedData} />
+  //           </PDFViewer>
+  //         </div>
+  //       </div>
+
+  //       {/* Fixed Footer */}
+
+  //       <FooterSection className="fixed-footer" />
+  //     </div>
+  //   );
+  // }
+
+  // === STABILIZED PDF DATA ===
+  const [delayedData, setDelayedData] = useState(data);
+  const [isUpdating, setIsUpdating] = useState(false);
+
+  useEffect(() => {
+    setIsUpdating(true);
+    const timer = setTimeout(() => {
+      setDelayedData(data);
+      setIsUpdating(false);
+    }, 600); // Delay PDF update slightly after data changes
+    return () => clearTimeout(timer);
+  }, [data]);
+
+  // === MEMOIZED DATA FOR PERFORMANCE ===
+  const memoizedData = useMemo(
+    () => delayedData,
+    [JSON.stringify(delayedData)]
+  );
+
   return (
     <div className="app-container">
-      <PDFViewer width="100%" height="800">
-        <ItineraryPDFViewer data={data} />
-      </PDFViewer>
+      {/* Fixed Header */}
+      <ItineraryHeader className="fixed-header" />
+
+      <div className="main">
+        {/* Left — Builder */}
+        <div className="left-panel">
+          <ItineraryPDFBuilder data={data} setData={setData} />
+        </div>
+
+        {/* Right — PDF Viewer */}
+        <div className="right-panel">
+          {isUpdating ? (
+            <div className="pdf-loading-placeholder">
+              <p>⏳ Updating PDF preview...</p>
+            </div>
+          ) : (
+            <PDFViewer width="100%" height="100%">
+              <ItineraryPDFViewer data={memoizedData} />
+            </PDFViewer>
+          )}
+        </div>
+      </div>
+
+      {/* Fixed Footer */}
+      <FooterSection className="fixed-footer" />
     </div>
   );
 }

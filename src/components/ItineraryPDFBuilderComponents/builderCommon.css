@@ -1,0 +1,215 @@
+/* ===============================
+   GLOBAL BUILDER FORM STYLES
+   Used by: OverviewForm, DaysManager, FlightsManager, etc.
+   =============================== */
+
+:root {
+  --primary-color: #680099;
+  --light-bg: #f9f6fb;
+  --border-color: #ccc;
+  --shadow-light: 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --text-dark: #1a1a1a;
+  --text-muted: #666;
+}
+
+input,
+fieldset {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== Section Containers ===== */
+.builder-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-light);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subsection-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4b007d;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+  opacity: 0.6;
+}
+
+/* ===== Floating Fieldset Input Style ===== */
+.floating-fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 14px 12px 10px 12px;
+  margin-bottom: 14px;
+  position: relative;
+  flex: 1;
+  transition: border-color 0.2s ease;
+}
+
+.floating-fieldset legend {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--primary-color);
+  padding: 0 6px;
+  position: absolute;
+  top: -7px;
+  left: 12px;
+  background: #fff;
+  line-height: 1;
+}
+
+.floating-fieldset:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(104, 0, 153, 0.1);
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+/* ===== Buttons ===== */
+.primary-btn {
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #4e0073;
+}
+
+.small-btn {
+  background: #f3e5f5;
+  color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.small-btn:hover {
+  background: #e6ccf1;
+}
+
+/* ===== Divider & Layout ===== */
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 14px 0;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+/* ===== Cards (like Days, Hotels, Flights) ===== */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+  background: #fafafa;
+  position: relative;
+}
+
+.card-header h4 {
+  font-size: 14px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.card-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.card-body {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f8d7da;
+  color: #a33;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #f1bfc3;
+}
+
+.no-data {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+/* ===== Preview Box ===== */
+.preview-box {
+  background: var(--light-bg);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.preview-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.preview-row.small {
+  font-size: 12px;
+  color: var(--text-muted);
+}

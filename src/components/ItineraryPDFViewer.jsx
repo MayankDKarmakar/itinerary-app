@@ -1,14 +1,14 @@
 import React from "react";
 import { Document, Page, StyleSheet } from "@react-pdf/renderer";
-import HeaderSection from "./HeaderSection";
-import DayTimelineSection from "./DayTimelineSection";
-import FooterSection from "./FooterSection";
-import FlightSummarySection from "./FlightSummarySection";
-import InfoTableSection from "./InfoTableSection";
-import TermsAndConditionsSection from "./TermsAndConditionsSection";
-import PaymentPlanSection from "./PaymentPlanSection";
-import VisaDetailsSection from "./VisaDetailsSection";
-import BookNowSection from "./BookNowSection";
+import HeaderSection from "./ItineraryPDFViewerComponents/HeaderSection";
+import DayTimelineSection from "./ItineraryPDFViewerComponents/DayTimelineSection";
+import FooterSection from "./ItineraryPDFViewerComponents/FooterSection";
+import FlightSummarySection from "./ItineraryPDFViewerComponents/FlightSummarySection";
+import InfoTableSection from "./ItineraryPDFViewerComponents/InfoTableSection";
+import TermsAndConditionsSection from "./ItineraryPDFViewerComponents/TermsAndConditionsSection";
+import PaymentPlanSection from "./ItineraryPDFViewerComponents/PaymentPlanSection";
+import VisaDetailsSection from "./ItineraryPDFViewerComponents/VisaDetailsSection";
+import BookNowSection from "./ItineraryPDFViewerComponents/BookNowSection";
 
 const importantNotes = [
   {

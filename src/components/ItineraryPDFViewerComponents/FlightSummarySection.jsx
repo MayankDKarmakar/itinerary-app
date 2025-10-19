@@ -108,7 +108,8 @@ const FlightSummarySection = ({ flights }) => (
         </View>
         <View style={styles.rightBox}>
           <Text style={styles.flightInfo}>
-            <Text style={styles.flightBold}>Fly {f.airline}</Text> {f.route}.
+            <Text style={styles.flightBold}>Fly {f.airline}</Text> From{" "}
+            {f.route.from} to {f.route.to}.
           </Text>
         </View>
       </View>

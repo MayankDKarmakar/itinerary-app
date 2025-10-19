@@ -1,0 +1,153 @@
+/* .builder-footer {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background-color: #f9f7ff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 12px 12px 0 0;
+}
+
+.footer-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.footer-logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background-color: #ece1f9;
+  border: 2px dashed #680099;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #680099;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-company {
+  font-weight: 600;
+  color: #342766;
+  font-size: 1rem;
+}
+
+.footer-contact,
+.footer-address {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.footer-right {
+  text-align: right;
+  flex: 1;
+}
+
+.footer-right-text {
+  color: #777;
+  font-size: 0.8rem;
+} */
+
+.footer-container {
+  background: #fff;
+  padding: 10px 60px 20px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 100%;
+  color: #000;
+  box-sizing: border-box;
+  /* border-top: 1px solid red; */
+  box-shadow: 1px -4px 32px -6px rgba(0, 0, 0, 0.5);
+  /* text-align: center; */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* === Left Section === */
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-company-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer-address {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #111;
+}
+
+/* === Middle Section === */
+.footer-middle {
+  flex: 1;
+  min-width: 220px;
+  font-size: 13px;
+  color: #111;
+}
+
+.footer-middle p {
+  margin: 4px 0;
+}
+
+/* === Right Section (Logo + Tagline) === */
+.footer-right {
+  text-align: right;
+  flex: 1;
+  min-width: 160px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 5px;
+  object-fit: contain;
+}
+
+.footer-tagline {
+  font-size: 12px;
+  color: #2d1155;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.footer-tag-text {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.footer-plane {
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-right {
+    text-align: center;
+  }
+}

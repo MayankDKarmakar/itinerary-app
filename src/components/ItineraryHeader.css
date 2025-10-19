@@ -1,0 +1,43 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #57b3ff, #b58cff);
+  color: white;
+  padding: 16px;
+  /* border-radius: 12px; */
+  /* margin-bottom: 16px; */
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.header-sub {
+  font-size: 13px;
+  opacity: 0.95;
+}
+.header-right {
+  text-align: right;
+}
+.header-topic {
+  font-weight: 700;
+}
+.header-note {
+  font-size: 13px;
+  opacity: 0.95;
+}
