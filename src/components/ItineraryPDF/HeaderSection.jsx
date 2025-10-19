@@ -1,64 +1,39 @@
 // ItineraryHeaderSection.jsx
 import React from "react";
 import "../../utils/font";
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  Image,
-  StyleSheet,
-  Font,
-} from "@react-pdf/renderer";
-const COLORS = {
-  primary: "#5b2b8a",
-  accent1: "#4BA1EB",
-  accent2: "#936FE0",
-  lightBg: "#f9f7ff",
-  border: "#666",
-  purpleTxt: "#342766",
-  text: "#000",
-  muted: "#777",
-};
-
-// Register Poppins
-// Font.register({
-//   family: "Poppins",
-//   fonts: [
-//     {
-//       src: "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-Regular.ttf",
-//     },
-//     {
-//       src: "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-SemiBold.ttf",
-//       fontWeight: 600,
-//     },
-//   ],
-// });
+import { COLORS } from "./pdfStyles";
+import { Text, View, Image, StyleSheet } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
+  // logo: {
+  //   fontFamily: "RedRose",
+  //   letterSpacing: 2,
+  //   textAlign: "center",
+  //   marginBottom: 6,
+  //   fontSize: 28,
+  //   color: COLORS.purpleTxt,
+  //   fontWeight: 300,
+  // },
+  // taglineContainer: {
+  //   flexDirection: "row",
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  //   gap: 25,
+  // },
+  // tagline: {
+  //   textAlign: "center",
+  //   fontSize: 8,
+  //   color: "#666",
+  //   marginBottom: 12,
+  // },
+  // taglineImg: {
+  //   width: "1rem",
+  // },
   logo: {
-    fontFamily: "RedRose",
-    letterSpacing: 2,
-    textAlign: "center",
-    marginBottom: 6,
-    fontSize: 28,
-    color: COLORS.purpleTxt,
-    fontWeight: 300,
-  },
-  taglineContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 25,
-  },
-  tagline: {
-    textAlign: "center",
-    fontSize: 8,
-    color: "#666",
-    marginBottom: 12,
-  },
-  taglineImg: {
-    width: "1rem",
+    width: 120,
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginBottom: 10,
   },
   bannerWrapper: {
     position: "relative",
@@ -116,14 +91,15 @@ const styles = StyleSheet.create({
 
 const HeaderSection = ({ data }) => (
   <view>
-    <Text style={styles.logo}>vigovia</Text>
+    {/* <Text style={styles.logo}>vigovia</Text>
     <View style={styles.taglineContainer}>
       <Text style={styles.tagline}>PLAN.PACK.GO </Text>
       <Image
         src="/assets/plane-taking-off.png"
         style={styles.taglineImg}
       ></Image>
-    </View>
+    </View> */}
+    <Image src="/assets/vigoviaLogo.png" style={styles.logo}></Image>
 
     {/* Gradient Banner using PNG */}
     <View style={styles.bannerWrapper}>

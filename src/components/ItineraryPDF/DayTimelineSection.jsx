@@ -1,16 +1,7 @@
 // ItineraryHeaderSection.jsx
 import React from "react";
 import "../../utils/font";
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  Image,
-  StyleSheet,
-  Font,
-} from "@react-pdf/renderer";
-// import gradientBg from "../assets/gradient_1200_800.png";
+import { Text, View, Image, StyleSheet } from "@react-pdf/renderer";
 const COLORS = {
   primary: "#5b2b8a",
   accent1: "#4BA1EB",
@@ -28,13 +19,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 20,
-    marginTop: 2,
+    // marginBottom: 20,
+    // marginTop: 2,
     paddingBottom: 20,
     paddingTop: 20,
     borderBottomWidth: 1,
     borderBottomColor: "#C5C5C5",
-    height: 185,
+    height: 161,
     width: "100%",
     // backgroundColor: "red",
   },
@@ -135,7 +126,7 @@ const DayTimelineSection = ({ days }) => (
         <View style={styles.dayRightContent}>
           <View style={styles.dayTopRow}>
             <Image
-              src="https://picsum.photos/200/200" //we will replace with actual day image URL
+              src="https://picsum.photos/200/200" //we will replace later with actual day image URL
               style={styles.dayImage}
             />
             <View style={styles.dayInfo}>

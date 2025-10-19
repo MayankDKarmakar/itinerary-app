@@ -1,17 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "@react-pdf/renderer";
-const COLORS = {
-  primary: "#5b2b8a",
-  accent1: "#4BA1EB",
-  accent2: "#936FE0",
-  accent3: "#F3E5F5",
-  textHighLit: "#680099",
-  lightBg: "#f9f7ff",
-  border: "#666",
-  purpleTxt: "#342766",
-  text: "#000",
-  muted: "#777",
-};
+import { COLORS } from "./pdfStyles";
 
 const styles = StyleSheet.create({
   section: {
@@ -53,7 +42,6 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 10,
     justifyContent: "center",
-    zIndex: 2,
     // overflow: "hidden",
     // borderRightWidth: 1,
     // borderRightColor: "#680099",

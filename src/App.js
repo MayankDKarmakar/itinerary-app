@@ -30,25 +30,61 @@ export default function App() {
         ],
         evening: ["Gardens By The Bay, Including Surprise walk near beach"],
       },
+      {
+        id: 2,
+        date: "27 Nov 2025",
+        title: "Arrival & City Exploration",
+        morning: ["Arrive in Singapore. Transfer From Airport to hotel."],
+        afternoon: [
+          "Hotel check-in",
+          "Marina Bay Sands Skypark",
+          "Optional Stroll Along Marina Bay waterfront Promenade or Helix Bridge",
+        ],
+        evening: ["Gardens By The Bay, Including Surprise walk near beach"],
+      },
+      {
+        id: 3,
+        date: "27 Nov 2025",
+        title: "Arrival & City Exploration",
+        morning: ["Arrive in Singapore. Transfer From Airport to hotel."],
+        afternoon: [
+          "Hotel check-in",
+          "Marina Bay Sands Skypark",
+          "Optional Stroll Along Marina Bay waterfront Promenade or Helix Bridge",
+        ],
+        evening: ["Gardens By The Bay, Including Surprise walk near beach"],
+      },
+      {
+        id: 4,
+        date: "27 Nov 2025",
+        title: "Arrival & City Exploration",
+        morning: ["Arrive in Singapore. Transfer From Airport to hotel."],
+        afternoon: [
+          "Hotel check-in",
+          "Marina Bay Sands Skypark",
+          "Optional Stroll Along Marina Bay waterfront Promenade or Helix Bridge",
+        ],
+        evening: ["Gardens By The Bay, Including Surprise walk near beach"],
+      },
     ],
     flights: [
       {
-        date: "Thu 10 Jan’24",
+        date: "Thu 10 Jan'24",
         airline: "Air India (AX-123)",
         route: "From Delhi (DEL) To Singapore (SIN)",
       },
       {
-        date: "Thu 10 Jan’24",
+        date: "Thu 10 Jan'24",
         airline: "Air India (AX-123)",
         route: "From Delhi (DEL) To Singapore (SIN)",
       },
       {
-        date: "Thu 10 Jan’24",
+        date: "Thu 10 Jan'24",
         airline: "Air India (AX-123)",
         route: "From Delhi (DEL) To Singapore (SIN)",
       },
       {
-        date: "Thu 10 Jan’24",
+        date: "Thu 10 Jan'24",
         airline: "Air India (AX-123)",
         route: "From Delhi (DEL) To Singapore (SIN)",
       },
@@ -80,6 +116,14 @@ export default function App() {
       },
       {
         id: 4,
+        city: "Singapore",
+        checkIn: "24/02/2024",
+        checkOut: "26/02/2024",
+        nights: 2,
+        hotelName: "Super Townhouse Oak Vashi Formerly Blue Diamond",
+      },
+      {
+        id: 5,
         city: "Singapore",
         checkIn: "24/02/2024",
         checkOut: "26/02/2024",
@@ -118,7 +162,27 @@ export default function App() {
         },
       ],
     },
-    inclusions: ["All flights mentioned", "Breakfast included at hotels"],
+    inclusionSummaryData: [
+      {
+        category: "Flight",
+        count: 2,
+        details: "All Flights Mentioned",
+        status: "Awaiting Confirmation",
+      },
+      {
+        category: "Tourist Tax",
+        count: 2,
+        details:
+          "Yotel (Singapore), Oakwood (Sydney), Mercure (Cairns), Novotel (Gold Coast), Holiday Inn (Melbourne)",
+        status: "Awaiting Confirmation",
+      },
+      {
+        category: "Hotel",
+        count: 2,
+        details: "Airport To Hotel - Hotel To Attractions - Day Trips If Any",
+        status: "Included",
+      },
+    ],
     exclusions: ["Visa fees", "Personal expenses"],
     visaDetails: {
       type: "Tourist",

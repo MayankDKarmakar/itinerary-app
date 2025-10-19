@@ -29,3 +29,14 @@ Font.register({
     { src: "/fonts/Roboto/Roboto-Bold.ttf", fontWeight: 700 },
   ],
 });
+
+//Register Red Hat
+Font.register({
+  family: "RedHat",
+  fonts: [
+    { src: "/fonts/RedHatText/RedHatText-Regular.ttf", fontWeight: "normal" },
+    { src: "/fonts/RedHatText/RedHatText-Light.ttf", fontWeight: 300 },
+    { src: "/fonts/RedHatText/RedHatText-Bold.ttf", fontWeight: 700 },
+    { src: "/fonts/RedHatText/RedHatText-SemiBold.ttf", fontWeight: 600 },
+  ],
+});
