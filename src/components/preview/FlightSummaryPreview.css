@@ -1,0 +1,143 @@
+.flight-summary-section {
+  margin-top: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.title-row {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.title-highlight {
+  color: var(--textHighLit);
+}
+
+/* === Flight Cards === */
+.flight-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.flight-card {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--accent2);
+  border-radius: 8px;
+  overflow: visible; /* Ensure delete button visible */
+  /* background: var(--accent3); */
+  position: relative;
+}
+
+/* === Left Box === */
+.card-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent3);
+  border-right: 1px solid var(--accent2);
+  padding: 10px 20px;
+  min-width: 140px;
+  font-weight: 600;
+  color: var(--text);
+  border-radius: 8px 0px 0px 8px;
+}
+
+.card-left .triangle {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 25px;
+  height: 25px;
+  background: var(--accent3);
+  border-top: 1px solid var(--accent2);
+  border-right: 1px solid var(--accent2);
+  z-index: 1;
+  border-top-right-radius: 5px;
+}
+
+.flight-date {
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* === Right Box === */
+.card-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 60px;
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.flight-details {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.flight-details strong {
+  color: var(--text);
+}
+
+.route {
+  color: var(--text);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* === Delete Button === */
+.dele-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent3);
+  border: 1px solid var(--accent2);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  color: var(--textHighLit);
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  /* text-align: center; */
+  /* z-index: 5; */
+}
+
+.dele-btn:hover {
+  background: var(--accent2);
+  color: #fff;
+}
+
+/* === Note === */
+.note-text {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 5px;
+}
+
+.no-records {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 8px;
+}

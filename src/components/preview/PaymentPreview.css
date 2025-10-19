@@ -1,0 +1,83 @@
+.payment-plan-section {
+  margin-top: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* .title-row {
+  margin-bottom: 10px;
+} */
+
+/* .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+} */
+
+/* .title-highlight {
+  color: var(--textHighLit);
+} */
+
+/* === Payment Cards (Total Amount + TCS) === */
+.payment-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.payment-card {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--accent2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--accent3);
+}
+
+/* .card-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent3);
+  border-right: 1px solid var(--accent2);
+  padding: 10px 20px;
+  min-width: 160px;
+  font-weight: 600;
+  color: var(--text);
+} */
+
+/* .card-left .triangle {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 25px;
+  height: 25px;
+  background: var(--accent3);
+  border-top: 1px solid var(--accent2);
+  border-right: 1px solid var(--accent2);
+  z-index: 1;
+} */
+
+/* .card-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 14px;
+} */
+
+.card-value {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Optional: bold the rupee sign section */
+.card-value strong {
+  color: var(--textHighLit);
+}

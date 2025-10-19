@@ -66,12 +66,12 @@ const FlightsManager = ({ flights = [], setData }) => {
   };
 
   // Delete Flight
-  const handleDeleteFlight = (id) => {
-    setData((prev) => ({
-      ...prev,
-      flights: prev.flights.filter((f) => f.id !== id),
-    }));
-  };
+  //   const handleDeleteFlight = (id) => {
+  //     setData((prev) => ({
+  //       ...prev,
+  //       flights: prev.flights.filter((f) => f.id !== id),
+  //     }));
+  //   };
 
   return (
     <div className="builder-section">
@@ -167,7 +167,7 @@ const FlightsManager = ({ flights = [], setData }) => {
       </button>
 
       {/* === Flights List === */}
-      <div className="days-list">
+      {/* <div className="days-list">
         {flights.length === 0 ? (
           <p className="no-data">No flights added yet.</p>
         ) : (
@@ -199,7 +199,7 @@ const FlightsManager = ({ flights = [], setData }) => {
             </div>
           ))
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -66,18 +66,18 @@ const PaymentManager = ({ paymentPlan = {}, setData }) => {
   };
 
   //  Delete installment
-  const handleDeleteInstallment = (id) => {
-    const updatedInstallments = formData.installments.filter(
-      (i) => i.id !== id
-    );
+  //   const handleDeleteInstallment = (id) => {
+  //     const updatedInstallments = formData.installments.filter(
+  //       (i) => i.id !== id
+  //     );
 
-    setFormData((prev) => ({ ...prev, installments: updatedInstallments }));
+  //     setFormData((prev) => ({ ...prev, installments: updatedInstallments }));
 
-    setData((prev) => ({
-      ...prev,
-      paymentPlan: { ...prev.paymentPlan, installments: updatedInstallments },
-    }));
-  };
+  //     setData((prev) => ({
+  //       ...prev,
+  //       paymentPlan: { ...prev.paymentPlan, installments: updatedInstallments },
+  //     }));
+  //   };
 
   return (
     <div className="builder-section">
@@ -122,7 +122,7 @@ const PaymentManager = ({ paymentPlan = {}, setData }) => {
       {/* <h4 className="subsection-title">Add Installments</h4> */}
       <div className="subsection-header">
         <h4 className="subsection-title">Add Installments</h4>
-        <div className="divider-line"></div>
+        {/* <div className="divider-line"></div> */}
       </div>
 
       <fieldset className="floating-fieldset">
@@ -170,7 +170,7 @@ const PaymentManager = ({ paymentPlan = {}, setData }) => {
       </button>
 
       {/* === Installments List === */}
-      <div className="days-list">
+      {/* <div className="days-list">
         {formData.installments.length === 0 ? (
           <p className="no-data">No installments added yet.</p>
         ) : (
@@ -199,7 +199,7 @@ const PaymentManager = ({ paymentPlan = {}, setData }) => {
             </div>
           ))
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

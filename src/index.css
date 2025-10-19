@@ -1,3 +1,18 @@
+/* variables.css */
+:root {
+  --primary: #5b2b8a;
+  --accent1: #4ba1eb;
+  --accent2: #936fe0;
+  --accent3: #f3e5f5;
+  --textHighLit: #680099;
+  --border: #c5c5c5;
+  --purpleTxt: #342766;
+  --purpleTxt2: #321e5d;
+  --btnColor: #541c9c;
+  --text: #000;
+  --muted: #777;
+}
+
 * {
   padding: 0;
   margin: 0;

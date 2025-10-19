@@ -1,7 +1,7 @@
 import React from "react";
 import "./ItineraryHeader.css";
 
-const ItineraryHeader = ({ onDownload }) => {
+const ItineraryHeader = () => {
   return (
     <header className="app-header">
       <div className="header-left">
@@ -13,7 +13,7 @@ const ItineraryHeader = ({ onDownload }) => {
       </div>
 
       <div className="header-right">
-        <div className="header-topic">Itinerary PDF — Final</div>
+        <div className="header-topic">Itinerary PDF App</div>
         <div className="header-note">Fill form → Preview → Download PDF</div>
       </div>
     </header>

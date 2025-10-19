@@ -1,0 +1,144 @@
+.days-preview {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+/* 
+.days-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--purpleTxt2);
+  margin-bottom: 15px;
+  text-align: left;
+} */
+
+/* === Each Day Card === */
+.day-card {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  position: relative;
+  box-sizing: border-box;
+  height: 200px;
+}
+
+.day-left-bar {
+  width: 35px;
+  background-color: var(--purpleTxt);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 15px 0;
+}
+
+.day-right-content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex: 1;
+  margin-left: 30px;
+}
+
+/* === Top Row === */
+.day-top-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* background-color: red; */
+  /* margin-bottom: 15px;
+  position: relative; */
+}
+
+.day-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.day-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.day-date {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.day-title {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Delete button */
+.delete-day-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--accent3);
+  border: 1px solid var(--accent2);
+  color: var(--textHighLit);
+  font-weight: 700;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-day-btn:hover {
+  background: var(--accent2);
+  color: #fff;
+}
+
+/* === Timeline === */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.timeline-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.time-label {
+  width: 80px;
+  font-weight: 600;
+  color: var(--purpleTxt2);
+}
+
+.activity-container {
+  flex: 1;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3px;
+}
+
+.bullet {
+  margin-right: 5px;
+  color: var(--primary);
+}
+
+.activity-text {
+  color: var(--muted);
+  line-height: 1.4;
+}

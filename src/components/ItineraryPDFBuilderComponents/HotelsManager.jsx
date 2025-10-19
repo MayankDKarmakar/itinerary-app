@@ -62,12 +62,12 @@ const HotelsManager = ({ hotelBookings = [], setData }) => {
   };
 
   // Delete hotel
-  const handleDeleteHotel = (id) => {
-    setData((prev) => ({
-      ...prev,
-      hotelBookings: prev.hotelBookings.filter((h) => h.id !== id),
-    }));
-  };
+  //   const handleDeleteHotel = (id) => {
+  //     setData((prev) => ({
+  //       ...prev,
+  //       hotelBookings: prev.hotelBookings.filter((h) => h.id !== id),
+  //     }));
+  //   };
 
   // Handle field changes
   const handleChange = (field, value) => {
@@ -149,7 +149,7 @@ const HotelsManager = ({ hotelBookings = [], setData }) => {
       </button>
 
       {/* === Hotels List === */}
-      <div className="days-list">
+      {/* <div className="days-list">
         {hotelBookings.length === 0 ? (
           <p className="no-data">No hotels added yet.</p>
         ) : (
@@ -186,7 +186,7 @@ const HotelsManager = ({ hotelBookings = [], setData }) => {
             </div>
           ))
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #57b3ff, #b58cff);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   color: white;
   padding: 16px;
   /* border-radius: 12px; */

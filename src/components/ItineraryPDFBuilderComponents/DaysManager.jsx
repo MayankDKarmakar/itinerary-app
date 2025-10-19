@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import "./DaysManager.css";
 import "./builderCommon.css";
 
 const DaysManager = ({ days = [], setData }) => {
@@ -36,13 +35,13 @@ const DaysManager = ({ days = [], setData }) => {
 
   console.log("Add day data", days);
   // Remove a day
-  const handleDeleteDay = (id) => {
-    console.log("Day id", id);
-    setData((prev) => ({
-      ...prev,
-      days: prev.days.filter((d) => d.id !== id),
-    }));
-  };
+  // const handleDeleteDay = (id) => {
+  //   console.log("Day id", id);
+  //   setData((prev) => ({
+  //     ...prev,
+  //     days: prev.days.filter((d) => d.id !== id),
+  //   }));
+  // };
 
   // Handle nested field updates
   const handleFieldChange = (field, value) => {
@@ -68,7 +67,7 @@ const DaysManager = ({ days = [], setData }) => {
 
   return (
     <div className="builder-section">
-      <h3 className="section-title">Days Manager</h3>
+      <h3 className="section-title">Days Manager 🌞</h3>
 
       {/* === Add Day Form === */}
       <div className="add-day-form">
@@ -173,7 +172,7 @@ const DaysManager = ({ days = [], setData }) => {
       </div>
 
       {/* === Days List === */}
-      <div className="days-list">
+      {/* <div className="days-list">
         {days.length === 0 ? (
           <p className="no-days">No days added yet.</p>
         ) : (
@@ -210,7 +209,7 @@ const DaysManager = ({ days = [], setData }) => {
             </div>
           ))
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

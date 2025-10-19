@@ -42,14 +42,14 @@ const InclusionManager = ({ inclusionSummaryData = [], setData }) => {
   };
 
   //  Delete inclusion
-  const handleDeleteInclusion = (id) => {
-    setData((prev) => ({
-      ...prev,
-      inclusionSummaryData: prev.inclusionSummaryData.filter(
-        (i) => i.id !== id
-      ),
-    }));
-  };
+  //   const handleDeleteInclusion = (id) => {
+  //     setData((prev) => ({
+  //       ...prev,
+  //       inclusionSummaryData: prev.inclusionSummaryData.filter(
+  //         (i) => i.id !== id
+  //       ),
+  //     }));
+  //   };
 
   //  Handle input change
   const handleChange = (field, value) => {
@@ -122,7 +122,7 @@ const InclusionManager = ({ inclusionSummaryData = [], setData }) => {
       </button>
 
       {/* === Inclusion List === */}
-      <div className="days-list">
+      {/* <div className="days-list">
         {inclusionSummaryData.length === 0 ? (
           <p className="no-data">No inclusions added yet.</p>
         ) : (
@@ -156,7 +156,7 @@ const InclusionManager = ({ inclusionSummaryData = [], setData }) => {
             </div>
           ))
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -18,7 +18,7 @@ const OverviewForm = ({ data, setData }) => {
 
   return (
     <div className="overview-section">
-      <h3 className="section-title">Overview</h3>
+      <h3 className="section-title">Overview 🎯</h3>
 
       {/* === Basic Info === */}
       <fieldset className="floating-fieldset">
